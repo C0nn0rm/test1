@@ -200,22 +200,125 @@ footer{
     padding:25px;
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-    header .container{
-        flex-direction:column;
-        gap:15px;
+    /* Header */
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
     }
 
-    nav a{
-        margin:0 10px;
+    .logo {
+        justify-content: center;
     }
 
-    .hero h2{
-        font-size:2.3rem;
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo-link img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Navigation */
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 70vh;
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.3rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Sections */
+    .services,
+    .about,
+    .contact {
+        padding: 50px 20px;
+    }
+
+    .services h2,
+    .about h2,
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Cards */
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px;
     }
 }
 
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .logo {
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 1.15rem;
+    }
+
+    .logo-link img {
+        width: 45px;
+        height: 45px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        padding: 5px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.9rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+    }
+}
 .navbar {
   display: flex;
   justify-content: space-between;
