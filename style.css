@@ -224,8 +224,8 @@ footer{
 }
 
 .logo-link img {
-  height: 40px; /* Adjust height to fit your navbar */
-  width: auto;
+  height: 50px; /* Adjust height to fit your navbar */
+  width: 80px;
 }
 
 .nav-links {
