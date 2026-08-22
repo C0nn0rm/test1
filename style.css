@@ -38,7 +38,7 @@ header .container{
 }
 
 .logo h1{
-    color:#000;
+    color:#0000CC;
     font-size:1.8rem;
 }
 
@@ -194,7 +194,7 @@ button:hover{
 }
 
 footer{
-    background:#111;
+    background:#0000CC;
     color:white;
     text-align:center;
     padding:25px;
