@@ -215,3 +215,21 @@ footer{
         font-size:2.3rem;
     }
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo-link img {
+  height: 40px; /* Adjust height to fit your navbar */
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
