@@ -421,3 +421,7 @@ footer{
     width: 100%;
   }
 }
+
+.nav-hidden {
+    display: none;
+}
