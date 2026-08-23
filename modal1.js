@@ -2,70 +2,45 @@ var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 var images = document.getElementsByClassName("gallery-img");
+var header = document.getElementById("site-header");
+var closeButton = document.getElementsByClassName("close")[0];
 
+
+// Open the image
 for (var i = 0; i < images.length; i++) {
 
     images[i].onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-    };
 
+        modal.style.display = "block";
+
+        modalImg.src = this.src;
+
+        captionText.innerHTML = this.alt;
+
+        // Hide the header
+        header.classList.add("nav-hidden");
+    };
 }
 
-var span = document.getElementsByClassName("close")[0];
 
-span.onclick = function() {
-    modal.style.display = "none";
-};
+// Close using X
+closeButton.onclick = function() {
 
-modal.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-};
-
-var navbar = document.getElementById("navbar");
-
-img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-    navbar.style.display = "none";
-};
-
-span.onclick = function() {
-    modal.style.display = "none";
-    navbar.style.display = "";
-};
-
-var navbar = document.getElementById("navbar");
-
-img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-
-    navbar.classList.add("nav-hidden");
-};
-
-span.onclick = function() {
     modal.style.display = "none";
 
-    navbar.classList.remove("nav-hidden");
-};
-
-var header = document.getElementById("site-header");
-
-img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-
-    header.classList.add("nav-hidden");
-};
-
-span.onclick = function() {
-    modal.style.display = "none";
+    // Show header again
     header.classList.remove("nav-hidden");
+};
+
+
+// Close when clicking the black background
+modal.onclick = function(event) {
+
+    if (event.target === modal) {
+
+        modal.style.display = "none";
+
+        // Show header again
+        header.classList.remove("nav-hidden");
+    }
 };
